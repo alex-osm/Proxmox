@@ -98,7 +98,8 @@ if [[ -z "$(grep -w "100000" /proc/self/uid_map)" ]]; then
   msg_ok "Set Up Hardware Acceleration"
 fi
 
-LATEST=$(curl -sL https://api.github.com/repos/MediaBrowser/Emby.Releases/releases/latest | grep '"tag_name":' | cut -d'"' -f4)
+#LATEST=$(curl -sL https://api.github.com/repos/MediaBrowser/Emby.Releases/releases/latest | grep '"tag_name":' | cut -d'"' -f4)
+LATEST="4.8.0.19"
 
 msg_info "Installing Emby"
 wget https://github.com/MediaBrowser/Emby.Releases/releases/download/${LATEST}/emby-server-deb_${LATEST}_amd64.deb &>/dev/null
